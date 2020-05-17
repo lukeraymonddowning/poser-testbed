@@ -22,6 +22,16 @@ class QuickCreateTest extends TestCase
     }
 
     /** @test */
+    public function it_can_be_passed_the_model_count_as_the_last_argument()
+    {
+        $items = UserFactory::craft(['name' => 'Foo'], ['name' => 'Bar'], 2);
+
+        $this->assertCount(2, $items);
+        $this->assertEquals('Foo', $items->first()->name);
+        $this->assertEquals('Bar', $items->last()->name);
+    }
+
+    /** @test */
     public function multiple_attributes_can_be_passed() {
         $items = UserFactory::craft(2, ['name' => 'Foo'], ['name' => 'Bar']);
 
@@ -33,7 +43,7 @@ class QuickCreateTest extends TestCase
     }
 
     /** @test */
-    public function a_single_instance_can_be_created_if_attributes_are_passed_to_the_craftOne_method() {
+    public function a_single_instance_can_be_created_if_attributes_are_passed_to_the_craft_method() {
         $item = UserFactory::craft(['name' => 'Test']);
 
         $this->assertInstanceOf(User::class, $item);
@@ -41,7 +51,7 @@ class QuickCreateTest extends TestCase
     }
 
     /** @test */
-    public function a_single_instance_can_be_created_if_empty_attributes_are_passed_to_the_craftOne_method() {
+    public function a_single_instance_can_be_created_if_empty_attributes_are_passed_to_the_craft_method() {
         $item = UserFactory::craft([]);
         $this->assertInstanceOf(User::class, $item);
 
