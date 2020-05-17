@@ -10,7 +10,7 @@
     "repositories": {
         "poser": {
             "type": "path",
-            "url": "packages/poser"
+            "url": "../poser"
         }
     },
     "require": {

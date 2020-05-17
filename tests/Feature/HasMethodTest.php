@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Poser;
+namespace Tests\Feature;
 
 use Tests\Factories\UserFactory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
