@@ -16,17 +16,17 @@
     "require": {
         "php": "^7.4",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "^6.2",
+        "laravel/framework": "^7",
         "laravel/tinker": "^2.0",
         "lukeraymonddowning/poser": "*"
     },
     "require-dev": {
-        "facade/ignition": "^1.4",
+        "facade/ignition": "^2",
         "fzaninotto/faker": "^1.9.1",
         "mockery/mockery": "^1.0",
-        "naoray/laravel-package-maker": "^2.0",
-        "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^8.0"
+        "naoray/laravel-package-maker": "^3.0",
+        "nunomaduro/collision": "^4",
+        "phpunit/phpunit": "^8"
     },
     "config": {
         "optimize-autoloader": true,
