@@ -34,7 +34,7 @@ class QuickCreateTest extends TestCase
 
     /** @test */
     public function a_single_instance_can_be_created_if_attributes_are_passed_to_the_craftOne_method() {
-        $item = UserFactory::craftOne(['name' => 'Test']);
+        $item = UserFactory::craft(['name' => 'Test']);
 
         $this->assertInstanceOf(User::class, $item);
         $this->assertEquals('Test', $item->name);
@@ -42,10 +42,10 @@ class QuickCreateTest extends TestCase
 
     /** @test */
     public function a_single_instance_can_be_created_if_empty_attributes_are_passed_to_the_craftOne_method() {
-        $item = UserFactory::craftOne([]);
+        $item = UserFactory::craft([]);
         $this->assertInstanceOf(User::class, $item);
 
-        $item = UserFactory::craftOne();
+        $item = UserFactory::craft();
         $this->assertInstanceOf(User::class, $item);
     }
 }
